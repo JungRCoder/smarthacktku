@@ -1,0 +1,53 @@
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% block content %}
+<style>
+  body {
+    background: url('/static/main/img/gamebg.jpg');
+    padding-top: 50px;
+    background-size: 100% 100%;
+  }
+
+  p {
+    text-align: center;
+    font-size: 60px;
+    margin-top:0px;
+    }
+</style>
+
+<center>
+    <h1><strong>Punish Time</strong></h1>
+    <p id="demo">0 : 58 : 20 </p>
+    <br /><br /><br />
+    <a class="btn btn-default btn-lg" href="/startEat/challenge/?" role="button">真心話</a><br /><br />
+    <a class="btn btn-default btn-lg" href="/startEat/challenge/?" role="button">大冒險</a><br /><br />
+    <br /><br /><br />
+    <a class="btn btn-danger btn-lg" href="/startEat/end/?" role="button">結束用餐</a>
+</center>
+
+<script>
+// Update the count down every 1 second
+var distance = 3500000;
+var x = setInterval(function() {
+    
+    // Find the distance between now an the count down date
+    distance -= 1000;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = hours + " : " + minutes + " : " + seconds + " ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Good Ending";
+    }
+
+    
+}, 1000);
+</script>
+{% endblock %}

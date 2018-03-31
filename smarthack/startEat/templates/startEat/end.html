@@ -1,0 +1,21 @@
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% block content %}
+<style>
+  body {
+    background: url('/static/main/img/etbg.jpg');
+    padding-top: 50px;
+    background-size: 100% 100%;
+  }
+</style>
+
+<center>
+    <h1><strong>用餐結束</strong></h1><br><br><br>
+    <p style="font-size:48px;">本次用餐共獲得</p>
+    <p style="font-size:48px;">120成長點數</p>
+    <p style="font-size:48px;">萌寵感到很開心</p>
+    <br><br><br>
+    <a class="btn btn-danger btn-lg" href="/main/wakeup/?" role="button">返回主頁面</a>
+</center>
+
+{% endblock %}

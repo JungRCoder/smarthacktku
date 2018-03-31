@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^main/', include('main.urls', namespace='main')),
     url(r'^userLogin/', include('userLogin.urls', namespace='userLogin')),
     url(r'^eatTogether/', include('eatTogether.urls', namespace='eatTogether')),
+    url(r'^startEat/', include('startEat.urls', namespace='startEat')),
     url(r'^.*', include('main.urls'))
 ]

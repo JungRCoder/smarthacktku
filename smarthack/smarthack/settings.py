@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'userLogin',
     'eatTogether',
+    'startEat'
 ]
 
 MIDDLEWARE = [
