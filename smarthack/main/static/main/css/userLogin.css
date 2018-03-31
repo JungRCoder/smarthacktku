@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
+
+body {
+  padding-top: 90px;
+  background:#F7F7F7;
+  color:#666666;
+  font-family: 'Roboto', sans-serif;
+  font-weight:100;
+}
+
+body{
+  width: 100%;
+  background: url('/static/userLogin/img/userloginbackground.jpg');
+  background-size: 100% 100%;
+  background-repeat:repeat;
+  /*background-position:top center;*/
+  -webkit-animation: HeroBG 20s ease infinite;
+          animation: HeroBG 20s ease infinite;
+}
+
+@-webkit-keyframes HeroBG {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes HeroBG {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+.errorlistText{
+  color: red;
+  vertical-align: super;
+  list-style-type:none;
+}
+
+.formLabel, .errorlistText{
+	display:inline-block;
+}
+
+.row{
+	color: black;
+}
+
+

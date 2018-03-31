@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+  <title>線上股市資料</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>  
+  <link rel=stylesheet href="{% static 'main/css/userLogin.css' %}">
+  
+</head>
+
+<body>
+
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="text-center">
+          {% block contentTitle %}
+          {% if messages %}
+          	{% for message in messages %}
+          	<p class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} text-center" style="font-size: 20px;">{{message}}</p>
+          	{% endfor %}
+          {% else %}
+			<P>Welcome</P>  		  
+		  {% endif %}
+          {% endblock %}</h1>
+        </div>
+         <div class="modal-body">
+         {% block content %}
+         <form method=post action="{% url 'userLogin:login' %}">
+			{% csrf_token %}
+             <div class="form-group">
+                 <input type="text" name=username class="form-control input-lg" placeholder="Username"/>
+             </div>
+
+             <div class="form-group">
+                 <input type="password" name=password class="form-control input-lg" placeholder="Password"/>
+             </div>
+
+             <div class="form-group">
+                 <input type="submit" class="btn btn-block btn-lg btn-primary" value="Login"/>
+                 <br>
+                 <span class="pull-right"><a href="{% url 'userLogin:register' %}">Register</a></span><span><a href="{% url 'userLogin:forgetpassword' %}">Forgot Password</a></span>
+             </div>
+         </form>
+         {% endblock %}
+         </div>
+    </div>
+ </div>
+</body>
+</html>
