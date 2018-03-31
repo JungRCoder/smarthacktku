@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+  <title>Eat Together</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel=stylesheet href="{% static 'main/css/main.css' %}">
+  <script src="{% static 'main/js/main.js' %}"></script>
+</head>
+
+<body>
+
+  {% block content %}
+
+  {% endblock%}
+
+  <form method=get action="/eatTogether/invite/">
+  	<div class=eatbutton1 ><button type=submit class="button button2">揪吃</button></div>
+  </form>
+  <form method=get action="/eatTogether/eating/">
+  	<div class=eatbutton2 ><button type=submit class="button button2">開吃</button></div>
+  </form>
+  <div class="egg" ><img src="{% static 'main/img/egg.gif' %}"></div>
+
+{% block script %}
+
+{% endblock %}
+</body>
+</html>

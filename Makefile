@@ -1,3 +1,4 @@
+PY = python3
 PY_PATH = ./smarthack/manage.py
 
 all:
