@@ -1,0 +1,37 @@
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% block content %}
+<style>
+  body {
+    background: url('/static/main/img/invite.jpg');
+    padding-top: 50px;
+    background-size: 100% 100%;
+  }
+</style>
+<p></p>
+<p>Date: {{invite.day}}</p>
+<p>Place: {{invite.place}}</p>
+<p>Count: {{invite.count}}</p>
+<p>PW: {{invite.pw}}</p>
+<p>Comment: {{invite.comment}}</p>
+
+<table>
+
+<tr>
+<td>Title: </td><td>{{invite.title}}</td>
+</tr>
+</table>
+
+<div class="col-md-6">Title: </div><div class="col-md-6">{{invite.title}}</div>
+<table class="table table-hover table-striped  table-condensed">
+    <tr><th>等級</th><th>姓名</th><th>電話</th><th>距離</th></tr>
+    <tr>
+      <td>1</td>
+      <td></td>
+      <td>0912345678</td>
+      <td>Local</td>
+    </tr> 
+</table>
+
+
+{% endblock %}

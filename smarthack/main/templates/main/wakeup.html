@@ -1,10 +1,15 @@
 {% extends "main/main.html" %}
+{% load staticfiles %}
+{% block content %}
+<style>
+  body {
+    background: url('/static/main/img/ooxx.png');
+    padding-top: 50px;
+    background-size: 100% 100%;
+  }
+</style>
 
-  {% block content %}
-  <style>	
-	body{
-	  background: url('/static/main/img/ooxx.png');
-	}
-  </style>
-  {% endblock%} 
- 
+<div class="dog" ><img src="{% static 'main/img/dog.gif' %}"></div>
+
+
+{% endblock %}
