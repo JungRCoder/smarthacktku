@@ -1,2 +1,3 @@
-# smarthacktku
-this is a app.
+# Notice
+
+This web-based app is for demo only.
