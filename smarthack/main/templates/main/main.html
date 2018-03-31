@@ -14,9 +14,14 @@
 
 <body>
 
-  {% block content %}
-
-  {% endblock%}
+{% block content %}
+<style>
+  body {
+    background: url('/static/main/img/xxoo.png');
+    padding-top: 50px;
+    background-size: 100% 100%;
+  }
+</style>
 
   <form method=get action="/eatTogether/invite/">
   	<div class=eatbutton1 ><button type=submit class="button button2">揪吃</button></div>
@@ -25,7 +30,7 @@
   	<div class=eatbutton2 ><button type=submit class="button button2">開吃</button></div>
   </form>
   <div class="egg" ><img src="{% static 'main/img/egg.gif' %}"></div>
-
+{% endblock%}
 {% block script %}
 
 {% endblock %}

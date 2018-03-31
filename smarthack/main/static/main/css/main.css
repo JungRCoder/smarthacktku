@@ -2,11 +2,7 @@ body,html,.row-offcanvas {
   height:100%;
 }
 
-body {
-  padding-top: 50px;
-  background: url('/static/main/img/xxoo.png');
-  background-size: 100% 100%;
-}
+
 
 #sidebar {
   width: inherit;
@@ -97,6 +93,14 @@ nav .dropdown-menu > li > a:hover{
 	position:absolute;
 	left: 24%;
 	top: 58%;
+	
+}
+
+.dog{
+	margin: 0; padding: 0;
+	position:absolute;
+	left: 15%;
+	top: 40%;
 	
 }
 
