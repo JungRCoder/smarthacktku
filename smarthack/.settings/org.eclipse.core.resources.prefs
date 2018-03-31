@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//eatTogether/forms.py=utf-8
+encoding//eatTogether/models.py=utf-8
 encoding//eatTogether/views.py=utf-8
 encoding//main/views.py=utf-8
 encoding//userLogin/models.py=utf-8
