@@ -1,20 +1,29 @@
-# How to install app
+# Guildline
 
-First Check python version is 3.6
+* python version: 3.6
 
-Then, Check django version is 1.11.11
+* django version: 1.11.11
 
+* check database setting
 
-$ cd smarthack
+```
+cd smarthack
+```
 
-$ make mmi
+```
+make
+```
 
-for "python manage.py makemirgations"
+for
 
-$ make mi
+```
+python manage.py makemirgations
+python manage.py mirgate
+python manage.py runserver 127.0.0.1:8000
+```
 
-for "python manage.py mirgate"
+```
+make clean
+```
 
-$ make
-
-for "python manage.py runserver 127.0.0.1:8000"
+for remove \*.pyc and __pycache__ folders
