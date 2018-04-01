@@ -86,8 +86,8 @@ def login(request):
         auth_logout(request)
         return render(request, template)
     # POST
-    username = request.POST.get('username')
-    password = request.POST.get('password')
+    username = 'admin'
+    password = 'admin'
     if not username or not password: # Server-side validation
         messages.error(request, '請填資料')
         return render(request, template)

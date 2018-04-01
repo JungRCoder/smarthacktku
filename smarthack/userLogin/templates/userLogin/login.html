@@ -49,11 +49,18 @@
              </div>
          </form>
          <div align="center">
-             <form method="GET" action="/main/">
-             <button class="button button5" type="submit" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/facebook.png' %}"></button>
-            </form>
-             <button class="button button5" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/google.png' %}"></button>
-             <button class="button button5" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/twitter.png' %}"></button>
+             <form method=post action="{% url 'userLogin:login' %}" style=" display:inline!important;">
+             {% csrf_token %}
+               <button class="button button5" type="submit" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/facebook.png' %}"></button>
+             </form>
+             <form method=post action="{% url 'userLogin:login' %}" style=" display:inline!important;">
+             {% csrf_token %}
+               <button class="button button5" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/google.png' %}"></button>
+             </form>
+             <form method=post action="{% url 'userLogin:login' %}" style=" display:inline!important;">
+             {% csrf_token %}
+               <button class="button button5" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/twitter.png' %}"></button>
+         	 </form>
          </div>
          {% endblock %}
          </div>
