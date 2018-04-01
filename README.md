@@ -15,9 +15,7 @@ make
 ```
 
 for
-python manage.py makemirgations
-python manage.py mirgate
-python manage.py runserver 127.0.0.1:8000
+python manage.py makemirgations && python manage.py mirgate && python manage.py runserver 127.0.0.1:8000
 
 ```
 make clean
