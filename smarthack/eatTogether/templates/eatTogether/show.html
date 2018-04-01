@@ -8,30 +8,56 @@
     background-size: 100% 100%;
   }
 </style>
-<p></p>
-<p>Date: {{invite.day}}</p>
-<p>Place: {{invite.place}}</p>
-<p>Count: {{invite.count}}</p>
-<p>PW: {{invite.pw}}</p>
-<p>Comment: {{invite.comment}}</p>
+<p><h3>Title: {{invite.title}}</h3></p>
+<p><h3>Date: {{invite.day}}</h3></p>
+<p><h3>Place: {{invite.place}}</h3></p>
+<p><h3>Count: {{invite.count}}</h3></p>
+<p><h3>PW: {{invite.pw}}</h3></p>
+<p><h3>Comment: {{invite.comment}}</h3></p>
 
-<table>
 
-<tr>
-<td>Title: </td><td>{{invite.title}}</td>
-</tr>
-</table>
-
-<div class="col-md-6">Title: </div><div class="col-md-6">{{invite.title}}</div>
-<table class="table table-hover table-striped  table-condensed">
-    <tr><th>等級</th><th>姓名</th><th>電話</th><th>距離</th></tr>
-    <tr>
+<table class="table">
+    <tr class="warning"><th>等級</th><th>姓名</th><th>電話</th><th>距離</th></tr>
+{% if inviteMember %}
+    <tr class="active">
       <td>1</td>
-      <td></td>
+      <td>融哥</td>
       <td>0912345678</td>
       <td>Local</td>
     </tr> 
+    <tr class="warning">
+      <td>2</td>
+      <td>丞丞</td>
+      <td>0912345478</td>
+      <td>2.5km</td>
+    </tr>
+    <tr class="active">
+      <td>3</td>
+      <td>祥哥</td>
+      <td>09155555555</td>
+      <td>3.0km</td>
+    </tr>
+    <tr class="warning">
+      <td>4</td>
+      <td>胖胖</td>
+      <td>0987654321</td>
+      <td>1.3km</td>
+    </tr>
+    <tr class="active">
+      <td>5</td>
+      <td>表哥</td>
+      <td>0987654321</td>
+      <td>1.9m</td>
+    </tr>
+    {% endif %}
 </table>
+<form method=get action="#">
+{% csrf_token %}
+<input style="width:40%"  class="btn btn-primary btn-lg" type=submit value="立即開吃">
+</form>
 
-
+<form method=get action="/eatTogether/inviteMember/">
+{% csrf_token %}
+<input style="width:40%"  class="btn btn-primary btn-lg" type=submit value="邀請">
+</form>
 {% endblock %}
