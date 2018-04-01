@@ -53,4 +53,8 @@ def invite(request):
     invite = Invite.objects.get(title=title)
     context = {'invite':invite}
     return render(request, 'eatTogether/show.html', context)
+
+
+def inviteMember(request):
+    return render(request, 'eatTogether/inviteMember.html', context)
     
