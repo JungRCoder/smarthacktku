@@ -106,8 +106,6 @@ def login(request):
     messages.success(request, '登入成功')
     return redirect('main:main')
 
-@login_required
-@checkVerify_required
 def logout(request):
     '''
     Logout the user

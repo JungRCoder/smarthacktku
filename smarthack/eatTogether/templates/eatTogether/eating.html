@@ -3,13 +3,89 @@
 {% block content %}
 <style>
   body {
-    background: url('/static/main/img/ooxx.png');
+    background: url('/static/main/img/invite.jpg');
     padding-top: 50px;
     background-size: 100% 100%;
   }
 </style>
-
-<div class="dog" ><img src="{% static 'main/img/dog.gif' %}"></div>
+<center>
+  <h1><b>選擇飯局</b></h1>
+  <br />
+  <table class="table table-striped">
+    <thead>
+      <tr class="active">
+        <th>確認</th>
+        <th>姓名</th>
+        <th>地點</th>
+        <th>距離</th>
+      </tr>
+    </thead>
+    <tbody align="center">
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>融哥</td>
+        <td>麥當勞</td>
+        <td>50m</td>
+      </tr>
+      <tr class="active">
+        <td><input type="checkbox"></td>
+        <td>丞丞</td>
+        <td>肯德基</td>
+        <td>100m</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>胖胖</td>
+        <td>星巴克</td>
+        <td>173m</td>
+      </tr>
+      <tr class="active">
+        <td><input type="checkbox"></td>
+        <td>阿祥</td>
+        <td>Pizza Hot</td>
+        <td>400m</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>表哥</td>
+        <td>拿坡里</td>
+        <td>673m</td>
+      </tr>
+      <tr class="active">
+        <td><input type="checkbox"></td>
+        <td>蘇煒</td>
+        <td>美味烤鴨鴨</td>
+        <td>1km</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>岱林</td>
+        <td>香噴噴乳雞</td>
+        <td>1.2km</td>
+      </tr>
+      <tr class="active">
+        <td><input type="checkbox"></td>
+        <td>書綺</td>
+        <td>飛天燻茶鵝</td>
+        <td>1.6km</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>依婷</td>
+        <td>炸裂銀絲卷</td>
+        <td>1.9km</td>
+      </tr>
+      <tr class="active">
+        <td><input type="checkbox"></td>
+        <td>竹哥</td>
+        <td>炫炮花雕雞</td>
+        <td>2.1km</td>
+      </tr>
+    </tbody>
+  </table>
+  <br /><br />
+  <a class="btn btn-primary btn-lg" href="/eatTogether/eatingJoin/?">選擇</a>
+</center>
 
 
 {% endblock %}

@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html>
 <head>
-  <title>Eat Together</title>
+  <title>Feed and Eat</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">  
@@ -26,7 +26,7 @@
           	<p class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} text-center" style="font-size: 20px;">{{message}}</p>
           	{% endfor %}
           {% else %}
-			<P>Eat Together</P>  		  
+			<P>Feed and Eat</P>  		  
 		  {% endif %}
           {% endblock %}</h1>
         </div>
@@ -49,7 +49,9 @@
              </div>
          </form>
          <div align="center">
-             <button class="button button5" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/facebook.png' %}"></button>
+             <form method="GET" action="/main/">
+             <button class="button button5" type="submit" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/facebook.png' %}"></button>
+            </form>
              <button class="button button5" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/google.png' %}"></button>
              <button class="button button5" ><img style="height: 50px;width: 50px;" src="{% static 'main/img/twitter.png' %}"></button>
          </div>

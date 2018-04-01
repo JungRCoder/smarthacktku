@@ -8,34 +8,35 @@
     background-size: 100% 100%;
   }
 </style>
-<p><h2>邀請加入</h2></p>
+<center><p><h2><b>邀請加入</b></h2></p></center>
+<br><br>
 <table class="table">
     <tr class="warning"><th>邀請</th><th>等級</th><th>姓名</th><th>距離</th></tr>
-    <tr class="active">
+    <tr class="active" align="center">
       <td><input type="checkbox" name="vehicle" value="Bike"></td>
       <td>0</td>
       <td>一停</td>
       <td>6.2km</td>
-    </tr> 
-        <tr class="warning">
+    </tr align="center"> 
+    <tr class="warning" align="center">
       <td><input type="checkbox" name="vehicle" value="Bike"></td>
       <td>1</td>
       <td>阿祥</td>
       <td>30m</td>
     </tr>
-    <tr class="active">
+    <tr class="active" align="center">
       <td><input type="checkbox" name="vehicle" value="Bike"></td>
       <td>1</td>
       <td>丞丞</td>
       <td>25m</td>
     </tr>
-    <tr class="warning">
+    <tr class="warning" align="center">
       <td><input type="checkbox" name="vehicle" value="Bike"></td>
       <td>100</td>
       <td>表哥</td>
       <td>19m</td>
     </tr>
-    <tr class="active">
+    <tr class="active" align="center">
       <td><input type="checkbox" name="vehicle" value="Bike"></td>
       <td>10</td>
       <td>胖胖</td>
@@ -43,10 +44,12 @@
     </tr>
 
 </table>
+<br><br>
+<center>
 <form method=post action="/eatTogether/inviteMember/">
 {% csrf_token %}
 <input style="width:40%"  class="btn btn-primary btn-lg" type=submit value="選擇">
 <input type=hidden name=title value={{title}}>
 </form>
-
+</center>
 {% endblock %}

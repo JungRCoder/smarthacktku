@@ -27,10 +27,16 @@ class ErrorMessage(ErrorList):
 def eating(request):
     if request.method=='GET':
         now = datetime.datetime.now()
-        print('55555')
         context = {'now':now}
         return render(request, 'eatTogether/eating.html', context)
-    
+
+@login_required
+@checkVerify_required
+def eatingJoin(request):
+    if request.method=='GET':
+        now = datetime.datetime.now()
+        context = {'now':now}
+        return render(request, 'eatTogether/eatingJoin.html', context)
 
 @login_required
 @checkVerify_required
