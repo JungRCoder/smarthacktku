@@ -1,1 +1,52 @@
-123
+{% extends "main/main.html" %}
+{% load staticfiles %}
+{% block content %}
+<style>
+  body {
+    background: url('/static/main/img/invite.jpg');
+    padding-top: 50px;
+    background-size: 100% 100%;
+  }
+</style>
+
+<table class="table">
+    <tr class="warning"><th>邀請</th><th>等級</th><th>姓名</th><th>距離</th></tr>
+    <tr class="active">
+      <td><input type="checkbox" name="vehicle" value="Bike"></td>
+      <td>0</td>
+      <td>融哥</td>
+      <td>Local</td>
+    </tr> 
+    <tr class="warning">
+      <td><input type="checkbox" name="vehicle" value="Bike"></td>
+      <td>100</td>
+      <td>胖胖</td>
+      <td>1.3m</td>
+    </tr>
+    <tr class="active">
+      <td><input type="checkbox" name="vehicle" value="Bike"></td>
+      <td>10</td>
+      <td>表哥</td>
+      <td>1.9m</td>
+    </tr>
+    <tr class="warning">
+      <td><input type="checkbox" name="vehicle" value="Bike"></td>
+      <td>1</td>
+      <td>阿祥</td>
+      <td>3.0m</td>
+    </tr>
+    <tr class="active">
+      <td><input type="checkbox" name="vehicle" value="Bike"></td>
+      <td>1</td>
+      <td>丞丞</td>
+      <td>2.5m</td>
+    </tr>
+</table>
+<form method=post action="/eatTogether/inviteMember/">
+{% csrf_token %}
+<input style="width:40%"  class="btn btn-primary btn-lg" type=submit value="選擇">
+<input type=hidden name=title value={{title}}>
+{{title}}
+</form>
+
+{% endblock %}

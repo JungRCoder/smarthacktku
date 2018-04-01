@@ -51,10 +51,18 @@ def invite(request):
     
     print(title)
     invite = Invite.objects.get(title=title)
-    context = {'invite':invite}
+    context = {'invite':invite, 'title':title}
     return render(request, 'eatTogether/show.html', context)
 
 
 def inviteMember(request):
-    return render(request, 'eatTogether/inviteMember.html', context)
-    
+    if request.method=='GET':
+        title = request.GET.get('title')
+        print(title)
+        return render(request, 'eatTogether/inviteMember.html', {'title':title})
+
+    title = request.POST.get('title')
+    print(title)
+    invite = Invite.objects.get(title=title)
+    context = {'invite':invite, 'title':title, 'inviteMember':'inviteMember'}
+    return render(request, 'eatTogether/show.html', context)

@@ -12,10 +12,10 @@
 
   {% for field in inviteForm %}
   {% csrf_token %}
-    <p><h4>{{ field.label }}:{{ field }} 
+    <p><h3>{{ field.label }}:{{ field }} 
        {% if field.errors %}
          <span id=inviteForm>{{ field.errors }}</span>
-       {% endif %}</h4>  
+       {% endif %}</h3>  
     </p>
   {% endfor %}
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d629.1590970559354!2d121.44983807228095!3d25.175266258845802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1dcf4f494b3362b!2z5reh5rGf5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1522550778351" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
